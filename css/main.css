@@ -1,169 +1,199 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,600|Karla|Open+Sans|Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
-    box-sizing: border-box;
-}
 
 html,
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(235, 235, 235);
 }
 
-.page-wrapper {
+#navbar ul {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: flex-end;
+    font-family: "Roboto", sans-serif;
 }
 
-#navbar {
-    width: 300px;
-    height: calc(100% - 70px);
-    border-right: 2px solid white;
-    position: fixed;
-    top: 70px;
-    z-index: 1;
-    background-color: #34675C;
-    overflow: auto;
+#navbar ul li {
+    padding-right: 20px;
 }
 
-#main-doc {
-    width: 100%;
-    margin-left: 300px;
-    overflow: hidden;
-}
-
-.navigation-header {
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Cabin", Verdana, sans-serif;
-    font-size: 25px;
-    letter-spacing: 2px;
-    font-weight: 800;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    background-color: rgb(22, 44, 39);
-    width: 300px;
-    border-right: 2px solid white;
-}
-
-.navigation-header a {
-    color: white;
+#navbar ul li a {
     text-decoration: none;
+    color: rgba(0,0,0,0.87);
 }
 
-.first-section {
-    border-top: 2px solid white;
+#navbar ul li i {
+    color: rgb(88, 88, 88);
+    font-size: 22px;
 }
 
-.nav-content {
-    position: relative;
-    height: 50px;
-    border-bottom: 2px dashed white;
+#navbar ul li a img {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
 }
 
-.nav-link {
-    padding-left: 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+#navbar ul li,  #navbar ul li i {
     display: flex;
     align-items: center;
-    z-index: 10;
-    text-decoration: none;
-    color: white;
-    font-family: "Karla", Verdana, sans-serif;
-    font-size: 17px;
 }
 
-.nav-link:hover {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.main-section {
-    margin: 30px;
-}
-
-.first-section-main {
-    margin-top: 50px;
-}
-
-.main-section p {
-    padding: 3px 0 3px 0;
-}
-
-.main-section ul li {
-    padding: 0 0 15px 0;
-}
-
-.section-paragraph,
-.section-list {
-    text-align: justify;
-    font-family: "Open Sans", Verdana, sans-serif;
+.anchor-link {
     font-size: 15px;
 }
 
-.section-header {
-    font-family: "Cabin", Verdana, sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 2px;
+.anchor-link:hover {
+    opacity: .85;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.85);
 }
 
-.section-content {
+#logo-section {
+    margin-top: 37px;
+    height: 233px;
+    text-align: center;
+}
+
+#google_logo {
+    padding-top: 109px;
+    height: 92px;
+    width: 272px;
+}
+
+#form {
+    margin-top: -5px;
+    display: flex;
+    justify-content: center;
+}
+
+#search-field {
+    max-width: 564px;
+    height: 44px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border: none;
     padding-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
-code {
-    white-space: pre;
-    line-height: 2;
-    color: rgb(0, 25, 252);
-    font-family: "Inconsolata", monospace;
+#search-field input {
+    width: 480px;
+    height: 34px;
+    border: none;
+    outline: none;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    background: transparent;
+    font: 16px "Roboto", sans-serif;
+    line-height: 34px;
 }
 
-.code-wrapper {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgb(211, 211, 211);
-    padding: 15px 0 15px 15px;
+#search-field:hover {
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
 }
 
-ul {
-    margin-bottom: 0;
+.input-icons {
+    width: 80px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.no-top-margin {
-    margin-top: 0;
+.input-icons #mic {
+    width: 24px;
+    height: 24px;
 }
 
-@media screen and (max-width: 600px) {
-    #navbar {
-        width: 100%;
-        height: 250px;
-        border-bottom: 2px solid white;
-    }
+#buttons {
+    display: flex;
+    justify-content: center;
+}
 
-    #main-doc {
-        width: 100%;
-        margin-top: 320px;
-        margin-left: 0;
-    }
+#buttons input {
+    height: 36px;
+    width: 135px;
+    padding: 0 16px 0 16px;
+    margin: 32px 5px 32px 5px;
+    border: none;
+    cursor: pointer;
+    font: 14px "Roboto", sans-serif;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    color: #757575;
+}
 
-    .navigation-header {
-        width: 100%;
-    }
+#buttons input:hover {
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #222;
+}
 
-    code {
-        font-size: 3.4vw;
-    }
+footer {
+    border-top: 1px solid #e4e4e4;
+    position: absolute;
+    height: 82px;
+    width: 100%;
+    background-color: #f2f2f2;
+    bottom: 0;
+    left: 0;
+}
 
-    .anchor {
-        padding-top: 320px;
-        margin-top: -320px;
-    }
+footer .footer-up {
+    height: 49%;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-up span {
+    font: 15px "Roboto", sans-serif;
+    color: rgba(0,0,0,.54);
+    padding-left: 27px;
+}
+
+footer .footer-bottom {
+    width: 100%;
+    height: 49%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-bottom-right,
+.footer-bottom-left {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.footer-bottom-right {
+    float: right;
+}
+
+.footer-bottom-left {
+    float: left;
+}
+
+.footer-bottom-left a {
+    padding-left: 27px;
+}
+
+.footer-bottom-right a {
+    padding-right: 27px;
+}
+
+.footer-bottom-left a,
+.footer-bottom-right a {
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+    font: 15px "Roboto", sans-serif;
+}
+
+.footer-bottom-left a:hover,
+.footer-bottom-right a:hover {
+    text-decoration: underline;
 }
